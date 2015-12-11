@@ -1,0 +1,21 @@
+.menu-button {
+	-fx-background-color: transparent;
+	-fx-border-color: transparent;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+}
+
+.master-pane {
+	-fx-padding: 60 0 0 0;
+}
+
+.master-pane-background {
+	-fx-border-color: black;
+	-fx-border-width: 2px;
+	-fx-background-radius: 12px;
+	-fx-background-insets: 40 0 0 0;
+	-fx-background-image: url("background-green.png");
+	-fx-background-size: cover;
+	-fx-background-position: center;
+	-fx-opacity: .8;
+}

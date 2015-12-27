@@ -55,7 +55,6 @@ public class MasterPane extends StackPane {
 	private Map<ItemType, Button> buttonMap = new HashMap<>();
 	private Map<ItemType, Rectangle2D> smallBoundsMap = new HashMap<>();
 	private Map<ItemType, Rectangle2D> largeBoundsMap = new HashMap<>();
-
 	private enum Mode {
 		SMALL, LARGE;
 	}
@@ -132,6 +131,7 @@ public class MasterPane extends StackPane {
 			// imageView.setFitHeight(128);
 
 			button.setGraphic(imageView);
+//			button.setText("urcina");
 		}
 
 		widthProperty().addListener(it -> calculateBounds());

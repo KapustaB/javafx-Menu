@@ -21,6 +21,7 @@
 */
 .undecorator-label-titlebar{
    /* -fx-text-fill: #000000; if defined here, so way to override it in external apps*/
+   -fx-text-fill: white; /*ja stavjooooo belo TODO HEHE HUA HUE */
 }
 /*
 *	Menu button

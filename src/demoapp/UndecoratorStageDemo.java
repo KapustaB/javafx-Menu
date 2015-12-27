@@ -33,34 +33,35 @@ import javafx.stage.WindowEvent;
 public class UndecoratorStageDemo extends Application {
 
     Stage primaryStage;
-    @FXML
+    /*@FXML
     private AreaChart areaChart;
     @FXML
-    private PieChart pieChart;
+    private PieChart pieChart;*/
 
     @Override
     @SuppressWarnings("CallToThreadDumpStack")
     public void start(final Stage stage) throws Exception {
         primaryStage = stage;
         primaryStage.setTitle("Undecorator Stage Demo");
+
         // The UI (Client Area) to display
         Region root = null;
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ClientArea.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("moj.fxml"));
             fxmlLoader.setController(this);
             root = (Region) fxmlLoader.load();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-        final Undecorator undecorator = new Undecorator(stage, root);
+		final Undecorator undecorator = new Undecorator(stage, root);
         // Customize it by CSS if needed:
         undecorator.getStylesheets().add("skin/undecorator.css");
 
         // Optional: Enable this node to drag the stage
         // By default the root argument of Undecorator is set as draggable
-        Node node = root.lookup("#draggableNode");
-        undecorator.setAsStageDraggable(stage, node);
+//        Node node = root.lookup("#draggableNode");
+//        undecorator.setAsStageDraggable(stage, node);
 
         Scene scene = new Scene(undecorator);
 
@@ -84,8 +85,9 @@ public class UndecoratorStageDemo extends Application {
         stage.initStyle(StageStyle.TRANSPARENT);
 
         stage.setScene(scene);
+        
         // Feed Charts with fake data for demo
-        initCharts();
+//        initCharts();
 
         stage.show();
 
@@ -101,7 +103,7 @@ public class UndecoratorStageDemo extends Application {
      *
      * @param event
      */
-    @FXML
+   /* @FXML
     @SuppressWarnings("CallToThreadDumpStack")
     private void handleShowUtilityStage(ActionEvent event) {
         // Stage Utility usage
@@ -134,14 +136,14 @@ public class UndecoratorStageDemo extends Application {
         }
         utilityStage.sizeToScene();
         utilityStage.show();
-    }
+    }*/
 
     /**
      * Show a non resizable Stage
      *
      * @param event
      */
-    @FXML
+    /*@FXML
     @SuppressWarnings("CallToThreadDumpStack")
     private void handleShowNonResizableStage(ActionEvent event) {
         UndecoratorStageDemo undecoratorStageDemo = new UndecoratorStageDemo();
@@ -155,7 +157,7 @@ public class UndecoratorStageDemo extends Application {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }
+    }*/
 
     /**
      * Handles Utility stage buttons
@@ -169,8 +171,8 @@ public class UndecoratorStageDemo extends Application {
     /**
      * Demo purpose only, Fill charts with data
      */
-    void initCharts() {
-
+    void initCharts() {;
+/*
         final NumberAxis xAxis = new NumberAxis(1, 30, 1);
         final NumberAxis yAxis = new NumberAxis(-5, 27, 5);
         xAxis.setForceZeroInRange(true);
@@ -230,7 +232,7 @@ public class UndecoratorStageDemo extends Application {
                 new PieChart.Data("Apples", 30));
         pieChart.setData(pieChartData);
         pieChart.setTitle("Imported Fruits");
-
+*/
     }
 
     public static void main(String[] args) {
